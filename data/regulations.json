@@ -1,0 +1,1022 @@
+[
+  {
+    "authority": "국가우정국·SAMR",
+    "categories": [
+      "과대포장·감량"
+    ],
+    "country": "CN",
+    "effective": "2026-07-01",
+    "id": "cn-express-overpack",
+    "original": "限制快递过度包装要求",
+    "requirements": [
+      "내용물에 맞는 상자 크기",
+      "포장층수 제한",
+      "봉함 테이프 사용량 감축"
+    ],
+    "scope": "중국 내 택배·전자상거래 포장",
+    "sources": [
+      {
+        "name": "Packaging Insights",
+        "url": "https://www.packaginginsights.com/news/china-express-packaging-rules.html"
+      }
+    ],
+    "status": "시행",
+    "summary": "택배(전자상거래 포함) 과대포장을 겨냥한 첫 강제 국가표준. 상자 크기 적합성, 포장층수, 테이프 사용량 기준 설정.",
+    "title": "택배 과대포장 제한 요건 (강제 국가표준)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "국무원·국가우정국",
+    "categories": [
+      "과대포장·감량",
+      "재사용·리필"
+    ],
+    "country": "CN",
+    "effective": "2025-06-01",
+    "id": "cn-express-reg",
+    "nextDate": "2026-12-31",
+    "nextLabel": "전자상거래 택배 95% 2차포장 생략 목표 시한",
+    "original": "快递暂行条例 (2025 개정)",
+    "requirements": [
+      "2차 포장 감축",
+      "재사용 택배포장 확대",
+      "택배사·제조사·플랫폼 협력"
+    ],
+    "scope": "중국 택배 사업자, 전자상거래 판매자",
+    "sources": [
+      {
+        "name": "중국 정부 영문 발표",
+        "url": "https://english.www.gov.cn/news/202504/18/content_WS68023fe2c6d0868f4e8f1dd2.html"
+      },
+      {
+        "name": "Omopack 2025-2026 정책 해설",
+        "url": "https://www.omopack.com/industry-news/china-plastic-ban-2025-2026-policy-update/"
+      }
+    ],
+    "status": "시행",
+    "summary": "생분해·재사용 포장재 사용 장려, 2차 포장 감축, 포장재 회수 책임 명확화.",
+    "title": "택배 잠행조례 개정 (친환경 포장)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "국가시장감독관리총국(SAMR)",
+    "categories": [
+      "과대포장·감량"
+    ],
+    "country": "CN",
+    "effective": "2023-09-01",
+    "id": "cn-gb23350",
+    "original": "GB 23350-2021 (제1·2차 개정 포함)",
+    "penalty": "고형폐기물법에 따른 시정명령·과태료",
+    "requirements": [
+      "공간률·포장층수 기준 준수",
+      "직접 접촉 제외 포장비용 판매가의 20% 이하",
+      "2차 개정 k값 즉시 적용"
+    ],
+    "scope": "중국 내 판매되는 식품·화장품 판매포장",
+    "sources": [
+      {
+        "name": "Food Compliance International",
+        "url": "https://foodcomplianceinternational.com/industry-insight/news/4323-china-aims-for-less-excessive-packaging"
+      },
+      {
+        "name": "Knudsen 규제 분석",
+        "url": "https://knudsencrc.com/regulatory-analysis/chinas-crackdown-on-excessive-packaging-comprehensive-guide-for-food-exporters/"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품·화장품 판매포장의 공간률, 포장층수, 포장비용 제한. 2차 개정(2024)으로 층수·비용·총질량·k값 요건 개정, 대부분 2025-03-01 적용.",
+    "title": "식품·화장품 과대포장 제한 요건",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "국가위생건강위원회·SAMR",
+    "categories": [
+      "식품접촉물질"
+    ],
+    "country": "CN",
+    "effective": "2024-09-06",
+    "id": "cn-gb4806",
+    "original": "GB 4806.1-2016, GB 4806.7-2023 외",
+    "requirements": [
+      "재질별 GB 4806.x 준수",
+      "GB 31604 이행 시험",
+      "다층재는 각 층 적합성 확인"
+    ],
+    "scope": "중국 내 식품접촉 재료·제품",
+    "sources": [
+      {
+        "name": "SESEC",
+        "url": "https://sesec.eu/2025/04/02/china-enforces-new-mandatory-standards-for-food-contact-materials/"
+      },
+      {
+        "name": "Keller & Heckman",
+        "url": "https://www.khlaw.com/insights/chinas-modernized-regulation-packaging-and-food-contact-materials"
+      }
+    ],
+    "status": "시행",
+    "summary": "일반 안전 요건(4806.1)과 재질별 표준. 2023년 개정판(플라스틱·금속·고무·복합재·인쇄잉크)이 2024-09부터 시행, 구판 무효. 4806.1 개정 초안 진행 중.",
+    "title": "식품접촉재료 국가식품안전표준 GB 4806 시리즈",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "국가위생건강위원회",
+    "categories": [
+      "식품접촉물질"
+    ],
+    "country": "CN",
+    "effective": "2017-10-19",
+    "id": "cn-gb9685",
+    "original": "GB 9685-2016",
+    "requirements": [
+      "허용 첨가제·SML 준수"
+    ],
+    "scope": "중국 내 식품접촉 재료",
+    "sources": [
+      {
+        "name": "Enviliance FCM 동향",
+        "url": "https://enviliance.com/products/food-contact-materials"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품접촉재료 첨가제 허용목록과 사용 조건. 2025-07 개정 초안 공개.",
+    "title": "식품접촉재료 첨가제 사용 표준",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "국가발전개혁위원회·생태환경부",
+    "categories": [
+      "일회용 플라스틱"
+    ],
+    "country": "CN",
+    "effective": "2020-01-16",
+    "id": "cn-plastic-ban",
+    "original": "关于进一步加强塑料污染治理的意见 (2020)",
+    "requirements": [
+      "비분해 일회용 빨대·식기 금지(외식업)",
+      "택배 비분해 플라스틱 포장 단계적 중단"
+    ],
+    "scope": "중국 내 유통·외식·택배 사업자",
+    "sources": [
+      {
+        "name": "KPN 2026 플라스틱 규제 정리",
+        "url": "https://kpneco.com/blogs/molded-pulp-packaging/2026-global-plastic-restriction-policy"
+      }
+    ],
+    "status": "시행",
+    "summary": "2020~2025 단계적 일회용 플라스틱 제한. 2025년 말까지 우정·택배 거점의 비분해 플라스틱 봉투·테이프 사용 중단 등.",
+    "title": "플라스틱 오염 관리 강화 의견 (일회용 플라스틱 제한)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "European Commission (DG SANTE)",
+    "categories": [
+      "식품접촉물질",
+      "유해물질(PFAS·중금속)"
+    ],
+    "country": "EU",
+    "effective": "2025-01-20",
+    "id": "eu-bpa-2024-3190",
+    "nextDate": "2026-07-20",
+    "nextLabel": "단일사용 제품 일반 전환기간 종료(추정, 원문 확인)",
+    "original": "Commission Regulation (EU) 2024/3190",
+    "requirements": [
+      "BPA 사용 금지 및 기타 유해 비스페놀 제한",
+      "전환기간 내 재고 소진 허용"
+    ],
+    "scope": "캔 코팅, 접착제, 플라스틱 등 식품접촉 재료",
+    "sources": [
+      {
+        "name": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/3190/oj"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품접촉 코팅·바니시·플라스틱 등에서 BPA 및 일부 비스페놀 사용 금지. 제품군별 전환기간 존재.",
+    "title": "식품접촉물질 비스페놀A(BPA) 사용 금지",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "European Commission (DG SANTE)",
+    "categories": [
+      "식품접촉물질"
+    ],
+    "country": "EU",
+    "effective": "2004-12-03",
+    "id": "eu-fcm-1935",
+    "original": "Regulation (EC) No 1935/2004",
+    "requirements": [
+      "건강 위해, 식품 성분 변화, 관능 변화 유발 금지",
+      "추적성 확보",
+      "'for food contact' 표시 또는 잔·포크 심볼"
+    ],
+    "scope": "EU 내 모든 식품접촉 재료·제품",
+    "sources": [
+      {
+        "name": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2004/1935/oj"
+      }
+    ],
+    "status": "시행",
+    "summary": "모든 식품접촉물질(FCM)의 안전성·이행성·추적성 일반 원칙을 정한 기본법.",
+    "title": "식품접촉물질 기본규정",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "European Commission (DG SANTE)",
+    "categories": [
+      "식품접촉물질"
+    ],
+    "country": "EU",
+    "effective": "2011-05-01",
+    "id": "eu-plastics-10-2011",
+    "original": "Commission Regulation (EU) No 10/2011",
+    "requirements": [
+      "Union list 등재 물질만 사용",
+      "총이행량 10 mg/dm² 및 특정이행한도(SML) 준수",
+      "공급망 적합성 선언(DoC)"
+    ],
+    "scope": "플라스틱 식품접촉 재료·제품",
+    "sources": [
+      {
+        "name": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2011/10/oj"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품접촉 플라스틱의 허용물질 목록(Union list), 총·특정 이행 한도, 적합성 선언(DoC) 요건을 규정.",
+    "title": "식품접촉 플라스틱 규정",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "European Commission (DG ENV)",
+    "categories": [
+      "재활용성·설계",
+      "유해물질(PFAS·중금속)",
+      "재생원료",
+      "과대포장·감량",
+      "표시·라벨링",
+      "재사용·리필",
+      "EPR·생산자책임"
+    ],
+    "country": "EU",
+    "effective": "2026-08-12",
+    "id": "eu-ppwr",
+    "nextDate": "2028-08-12",
+    "nextLabel": "통일 분리배출 라벨 의무",
+    "original": "Regulation (EU) 2025/40",
+    "penalty": "회원국 시장감시당국의 시정조치·유통금지 등",
+    "requirements": [
+      "2026-08-12부터 포장 적합성 평가, 기술문서(Annex VII), EU 적합성 선언(DoC) 필요",
+      "유해물질 최소화 의무 및 중금속 한도(기존 지침 승계)",
+      "일반 재활용성 요건 적용(2030년부터 등급 기반 요건 강화)",
+      "플라스틱 포장 재생원료 최소 함량: 2030년·2040년 단계 목표",
+      "통일 분리배출 라벨 2028-08-12, 재사용 포장 라벨 2029-02-12",
+      "문서 보관: 일회용 5년, 재사용 포장 10년"
+    ],
+    "scope": "EU 시장에 출시되는 모든 포장(재질·출처 불문), 제조자·수입자·유통업자",
+    "sources": [
+      {
+        "name": "European Commission 보도 (2026-08-11)",
+        "url": "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+      },
+      {
+        "name": "Freshfields PPWR 개요",
+        "url": "https://www.freshfields.com/en/our-thinking/blogs/sustainability/the-e-of-esg-an-overview-of-the-new-eu-packaging-regulation-ppwr-102necg"
+      }
+    ],
+    "status": "시행",
+    "summary": "1994년 포장지침(PPWD)을 대체하는 회원국 직접 적용 규정. 2025-02-11 발효, 2026-08-12부터 일반 적용되며 2030·2035·2040년까지 단계적으로 요건이 추가됨.",
+    "title": "EU 포장 및 포장폐기물 규정 (PPWR)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "European Commission",
+    "categories": [
+      "유해물질(PFAS·중금속)",
+      "식품접촉물질"
+    ],
+    "country": "EU",
+    "effective": "2026-08-12",
+    "id": "eu-ppwr-pfas",
+    "original": "Regulation (EU) 2025/40, Art. 5",
+    "penalty": "시장 출시 금지·회수",
+    "requirements": [
+      "식품접촉 포장의 PFAS 함량 기준 충족",
+      "2026-03 위원회 이행 가이드 참조",
+      "기존 재고도 2026-08-12 이후 출시분은 기준 충족 필요"
+    ],
+    "scope": "EU에 출시되는 식품접촉 포장",
+    "sources": [
+      {
+        "name": "European Commission 보도 (2026-08-11)",
+        "url": "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+      },
+      {
+        "name": "Latham & Watkins PPWR 가이드",
+        "url": "https://www.lw.com/en/insights/european-packaging-and-packaging-waste-regulation-summary-of-provisions-and-new-guidance"
+      }
+    ],
+    "status": "시행",
+    "summary": "2026-08-12부터 기준 농도 이상의 PFAS를 함유한 식품접촉 포장의 EU 출시 금지. 제조 시점과 관계없이 출시 시점 기준으로 적용.",
+    "title": "PPWR 식품접촉 포장 PFAS 제한",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "European Commission (DG SANTE)",
+    "categories": [
+      "식품접촉물질",
+      "재생원료"
+    ],
+    "country": "EU",
+    "effective": "2022-10-10",
+    "id": "eu-rpet-2022-1616",
+    "original": "Commission Regulation (EU) 2022/1616",
+    "requirements": [
+      "적합 기술(예: PET 기계적 재활용) 사용",
+      "재활용 공정 등록·결정 획득",
+      "입·출력 물질 적합성 선언"
+    ],
+    "scope": "식품접촉용 재생 플라스틱 생산자·사용자",
+    "sources": [
+      {
+        "name": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2022/1616/oj"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품접촉용 재생 플라스틱의 재활용 기술·공정 승인 및 품질관리 요건을 규정.",
+    "title": "식품접촉 재생 플라스틱 규정",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "European Commission",
+    "categories": [
+      "일회용 플라스틱",
+      "표시·라벨링",
+      "재생원료",
+      "EPR·생산자책임"
+    ],
+    "country": "EU",
+    "effective": "2021-07-03",
+    "id": "eu-sup-2019-904",
+    "original": "Directive (EU) 2019/904",
+    "requirements": [
+      "빨대·식기·EPS 용기 등 판매 금지",
+      "3L 이하 음료용기 캡 부착(tethered cap)",
+      "PET 음료병 재생원료 25%(2025), 전체 플라스틱병 30%(2030)"
+    ],
+    "scope": "EU 내 일회용 플라스틱 제품",
+    "sources": [
+      {
+        "name": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/dir/2019/904/oj"
+      }
+    ],
+    "status": "시행",
+    "summary": "특정 일회용 플라스틱 제품 판매 금지, 음료병 캡 부착, PET 병 재생원료 목표, 표시 의무 등.",
+    "title": "일회용 플라스틱 지침 (SUP)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "소비자청 (식품위생기준심사과)",
+    "categories": [
+      "식품접촉물질",
+      "재생원료"
+    ],
+    "country": "JP",
+    "effective": "2025-06-01",
+    "id": "jp-pl",
+    "nextDate": "2027-06-01",
+    "nextLabel": "총용출시험 의무 유예기간 종료(1년 유예, 원문 확인)",
+    "original": "食品衛生法 第18条第3項 (ポジティブリスト制度)",
+    "requirements": [
+      "PL 등재 물질만 사용 및 거래처 정보 전달",
+      "개정 규격·시험법 적용(2026-06-01)",
+      "재생 플라스틱 사용 가이드라인 준수"
+    ],
+    "scope": "일본 내 합성수지 식품용 기구·용기포장 제조·판매자",
+    "sources": [
+      {
+        "name": "Packaging Gateway",
+        "url": "https://www.packaging-gateway.com/news/japan-updates-regulations-for-food-contact-packaging/"
+      },
+      {
+        "name": "CIRS 재생원료 개정안",
+        "url": "https://www.cirs-group.com/en/food/japan-seeks-public-comments-on-two-amendments-regarding-the-use-of-recycled-materials-in-food-contact-applications"
+      }
+    ],
+    "status": "시행",
+    "summary": "합성수지 식품용 기구·용기포장은 포지티브리스트 등재 물질만 사용. 2026-06-01부터 개정 시험법 및 개별 규격 없는 합성수지 총용출시험 적용(1년 유예). 물리적 재생 PE·PP 반영 개정 추진.",
+    "title": "식품용 기구·용기포장 포지티브리스트 제도",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "경제산업성·환경성",
+    "categories": [
+      "재활용성·설계",
+      "일회용 플라스틱",
+      "재생원료"
+    ],
+    "country": "JP",
+    "effective": "2022-04-01",
+    "id": "jp-plastic-act",
+    "original": "プラスチックに係る資源循環の促進等に関する法律",
+    "requirements": [
+      "플라스틱 사용 제품 설계지침 준수 노력",
+      "특정 플라스틱 사용제품(포크·빨대 등) 다량 제공 사업자 감량 목표",
+      "설계 인증 시 그린구매 대상 우대"
+    ],
+    "scope": "플라스틱 제품 제조·판매·제공 사업자",
+    "sources": [
+      {
+        "name": "2026 한·중·일 재활용 규제 정리",
+        "url": "https://www.kitechrecyclingmachine.com/new-2026-regulations-in-china-south-korea-japan-in-plastic-recycling.html"
+      }
+    ],
+    "status": "시행",
+    "summary": "설계 지침, 특정 일회용 플라스틱 제품 감량, 재활용 촉진. 2026-01-24부터 재활용 설계 인증(자율) 운영.",
+    "title": "플라스틱 자원순환촉진법",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "경제산업성",
+    "categories": [
+      "표시·라벨링",
+      "재생원료"
+    ],
+    "country": "JP",
+    "effective": "2001-04-01",
+    "id": "jp-shigen-yuko",
+    "original": "資源の有効な利用の促進に関する法律",
+    "requirements": [
+      "지정표시제품 식별마크 표시",
+      "(개정) 일정 규모 이상 사업자의 재생재 이용 계획·보고"
+    ],
+    "scope": "일본 내 용기포장 제조·이용 사업자",
+    "sources": [
+      {
+        "name": "Eco Plastics in Packaging (일본 재생재 동향)",
+        "url": "https://ecoplasticsinpackaging.com/legislation-regulations/japan-recycled-plastics/"
+      }
+    ],
+    "status": "시행",
+    "summary": "PET병·플라스틱·종이 용기포장 식별표시 의무. 2025년 개정으로 재생재 이용 계획 제출 등이 도입된 것으로 알려져 있음(시행일·대상 원문 확인 필요).",
+    "title": "자원유효이용촉진법 (식별표시·재생재 이용)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "환경성·경제산업성",
+    "categories": [
+      "EPR·생산자책임"
+    ],
+    "country": "JP",
+    "effective": "1997-04-01",
+    "id": "jp-yoriho",
+    "original": "容器包装に係る分別収集及び再商品化の促進等に関する法律",
+    "requirements": [
+      "재상품화 의무량 산정 및 위탁료 납부(일본용기포장리사이클협회)",
+      "식별표시(자원유효이용촉진법) 병행"
+    ],
+    "scope": "일본 내 특정 용기·포장을 이용·제조·수입하는 사업자(소규모 제외)",
+    "sources": [
+      {
+        "name": "Food Research Lab 일본 포장 규제",
+        "url": "https://www.foodresearchlab.com/insights/regulation-updates/japan-packaging-regulatory-compliance/"
+      }
+    ],
+    "status": "시행",
+    "summary": "유리병·PET병·종이·플라스틱 용기포장의 재상품화 의무를 특정사업자(제조·이용·수입)에 부과.",
+    "title": "용기포장 리사이클법",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부",
+    "categories": [
+      "과대포장·감량"
+    ],
+    "country": "KR",
+    "effective": "2026-04-30",
+    "id": "kr-delivery",
+    "original": "제품의 포장재질·포장방법에 관한 기준 등에 관한 규칙 / 간이측정방법 고시",
+    "penalty": "과태료 1차 100만원, 2차 200만원, 3차 이상 300만원",
+    "requirements": [
+      "포장공간비율 50% 이하, 포장 1회 이내",
+      "가로·세로·높이 합 50cm 이하 제외(자동화 설비는 60cm)",
+      "재생원료 20% 이상 비닐 60%, 종이 완충재 70%까지 허용",
+      "유리·도자기·액체·녹는 제품, 합포장, 재사용 포장, 길거나 납작한 제품 예외"
+    ],
+    "scope": "연 매출 500억원 이상 제조·수입·판매업체 (해외직구·개인거래 제외)",
+    "sources": [
+      {
+        "name": "경향신문 정리 (2026-05-03)",
+        "url": "https://www.khan.co.kr/article/202605031549001"
+      },
+      {
+        "name": "뉴스핌 고시 개정안 (2026-03-04)",
+        "url": "https://www.newspim.com/news/view/20260304000214"
+      }
+    ],
+    "status": "시행",
+    "summary": "2024-04-30 도입 후 2년 계도기간을 거쳐 2026-04-30 본격 시행. 포장공간비율 50% 이하, 포장 횟수 1회. 2026년 3월 고시 개정으로 예외 확대.",
+    "title": "택배 일회용 수송포장 기준 (과대포장 규제)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부·한국환경공단·순환경제공제조합",
+    "categories": [
+      "EPR·생산자책임"
+    ],
+    "country": "KR",
+    "effective": "2003-01-01",
+    "id": "kr-epr",
+    "original": "자원의 절약과 재활용촉진에 관한 법률 제16조",
+    "requirements": [
+      "재활용의무량 이행 또는 공제조합 분담금 납부",
+      "출고·수입 실적 보고"
+    ],
+    "scope": "대상 포장재 사용 제조·수입업자(규모 기준 이상)",
+    "sources": [
+      {
+        "name": "법무법인 세종(신김) 뉴스레터",
+        "url": "https://shinkim.com/kor/media/newsletter/pdf/3046"
+      }
+    ],
+    "status": "시행",
+    "summary": "포장재 제조·수입·판매자에 재활용 의무 부과. 공제조합 분담금은 재질·구조 평가 등급에 따라 차등.",
+    "title": "생산자책임재활용제도 (포장재 재활용의무)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "식품의약품안전처",
+    "categories": [
+      "식품접촉물질",
+      "재생원료"
+    ],
+    "country": "KR",
+    "effective": "",
+    "id": "kr-fcm",
+    "original": "식품위생법 제9조, 식약처 고시",
+    "requirements": [
+      "재질별 용출규격 준수",
+      "식품용 재생원료는 식약처 인정 필요",
+      "'식품용' 표시"
+    ],
+    "scope": "국내 식품용 기구·용기·포장 제조·수입업자",
+    "sources": [
+      {
+        "name": "국가법령정보센터",
+        "url": "https://www.law.go.kr"
+      }
+    ],
+    "status": "시행",
+    "summary": "재질별 용출 규격, 제조 기준, 식품용 재생원료 인정 기준을 규정.",
+    "title": "기구 및 용기·포장의 기준 및 규격",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부·한국환경공단",
+    "categories": [
+      "재활용성·설계",
+      "표시·라벨링"
+    ],
+    "country": "KR",
+    "effective": "2019-12-25",
+    "id": "kr-grade",
+    "original": "자원재활용법 제9조의3·제9조의4, 포장재 재질·구조 평가 고시",
+    "requirements": [
+      "평가 신청·결과 보고",
+      "'재활용 어려움' 표시",
+      "등급별 분담금 할증·감면"
+    ],
+    "scope": "EPR 대상 포장재 사용 제조·수입업자",
+    "sources": [
+      {
+        "name": "국가법령정보센터",
+        "url": "https://www.law.go.kr"
+      }
+    ],
+    "status": "시행",
+    "summary": "포장재를 재활용 용이성에 따라 최우수·우수·보통·어려움 등급으로 평가하고 '재활용 어려움' 등급 표시 의무.",
+    "title": "포장재 재질·구조 평가 및 등급표시",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부·한국환경공단",
+    "categories": [
+      "과대포장·감량"
+    ],
+    "country": "KR",
+    "effective": "",
+    "id": "kr-packcenter",
+    "original": "자원의 절약과 재활용촉진에 관한 법률 일부개정법률",
+    "requirements": [
+      "상시 점검·지자체 통보 체계 도입"
+    ],
+    "scope": "택배 포장 규제 대상 사업자",
+    "sources": [
+      {
+        "name": "네이트 뉴스 (2026-06-18)",
+        "url": "https://news.nate.com/view/20260618n34089"
+      }
+    ],
+    "status": "시행예정",
+    "summary": "택배 과대포장 준수 점검 및 위반 시 지자체 통보를 담당하는 전담 기구를 한국환경공단에 설치하는 개정안이 2026년 6월 국회 본회의 의결. 시행일은 공포 후 확인 필요.",
+    "title": "자원재활용법 개정: 제품포장관리지원센터 설치",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부",
+    "categories": [
+      "재활용성·설계"
+    ],
+    "country": "KR",
+    "effective": "2028-01-01",
+    "id": "kr-petcan",
+    "original": "제품의 포장재질·포장방법에 관한 기준 등에 관한 규칙 개정안 (공고 제2026-778호)",
+    "requirements": [
+      "PET캔 등 분리 곤란 결합 포장재 전환"
+    ],
+    "scope": "PET캔 사용 식음료 기업, 제조·수입업체",
+    "sources": [
+      {
+        "name": "ChemRadar (2026-08-20)",
+        "url": "https://www.chemradar.com/ko/news/detail/fvmwl1vdvwn4"
+      }
+    ],
+    "status": "입법예고",
+    "summary": "도구 없이 분리하기 어려운 PET 용기와 금속 결합 포장재 사용 금지 조항(제3조 제5항) 신설을 2026-08-10 입법예고. 최종안은 변경될 수 있음.",
+    "title": "PET-금속 결합 포장재(PET캔) 사용 금지 개정안",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부",
+    "categories": [
+      "재생원료"
+    ],
+    "country": "KR",
+    "effective": "2026-01-01",
+    "id": "kr-rpet",
+    "nextDate": "2030-01-01",
+    "nextLabel": "의무율 30%·대상 연 1,000톤 이상으로 확대 계획",
+    "original": "자원재활용법 제33조의3, 시행령 제38조, 플라스틱 재생원료 사용의무 고시",
+    "penalty": "미이행 시 명단 공표·과태료",
+    "requirements": [
+      "재생원료 10% 이상 사용(2026)",
+      "OEM 생산은 주문자가 의무자",
+      "이행 실적 보고"
+    ],
+    "scope": "먹는샘물·비알코올 음료 제조자 중 연 5,000톤 이상 페트병 사용자",
+    "sources": [
+      {
+        "name": "쿠키뉴스 (2026-02-04)",
+        "url": "https://www.kukinews.com/article/view/kuk202602040201"
+      },
+      {
+        "name": "법무법인 세종(신김) 뉴스레터",
+        "url": "https://www.shinkim.com/kor/media/newsletter/3046"
+      }
+    ],
+    "status": "시행",
+    "summary": "연 5,000톤 이상 페트병을 쓰는 먹는샘물·비알코올 음료 제조자는 2026년부터 재생원료 10% 이상 사용. 환경부 재활용 공정 인증과 식약처 식품용기 안전성 인증을 거친 원료만 인정.",
+    "title": "페트병 재생원료 사용의무제",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "기후에너지환경부",
+    "categories": [
+      "표시·라벨링"
+    ],
+    "country": "KR",
+    "effective": "",
+    "id": "kr-separation-mark",
+    "original": "자원재활용법 제14조, 분리배출 표시에 관한 지침",
+    "requirements": [
+      "지정 도안·크기·위치 준수",
+      "복합재질은 주재질 표기"
+    ],
+    "scope": "분리배출 표시 대상 포장재 사용 제조·수입업자",
+    "sources": [
+      {
+        "name": "국가법령정보센터",
+        "url": "https://www.law.go.kr"
+      }
+    ],
+    "status": "시행",
+    "summary": "종이팩·유리병·금속캔·합성수지 포장재의 분리배출 표시 의무와 도안·재질 표기 기준.",
+    "title": "분리배출 표시",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "CalRecycle",
+    "categories": [
+      "재생원료"
+    ],
+    "country": "US",
+    "effective": "2022-01-01",
+    "id": "us-ca-ab793",
+    "nextDate": "2030-01-01",
+    "nextLabel": "재생원료 50%로 상향",
+    "original": "AB 793 (2020)",
+    "requirements": [
+      "연도별 PCR 함량 목표 충족 및 보고"
+    ],
+    "scope": "캘리포니아 CRV 대상 플라스틱 음료용기 제조자",
+    "sources": [
+      {
+        "name": "Ecopackables 미국 EPR 가이드",
+        "url": "https://www.ecopackables.com/pages/us-packaging-epr-laws"
+      }
+    ],
+    "status": "시행",
+    "summary": "플라스틱 음료용기의 재생 플라스틱 최소 함량 의무. 2025년 25%, 2030년 50%.",
+    "title": "캘리포니아 AB 793 음료용기 재생원료 최소함량",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "CalRecycle",
+    "categories": [
+      "표시·라벨링",
+      "재활용성·설계"
+    ],
+    "country": "US",
+    "effective": "2026-10-04",
+    "id": "us-ca-sb343",
+    "original": "SB 343 (2021)",
+    "requirements": [
+      "재활용 가능 주장 시 CalRecycle 재질 특성 조사 기준 충족",
+      "미충족 시 재활용 심볼 삭제"
+    ],
+    "scope": "캘리포니아에서 판매·유통되는 제품·포장",
+    "sources": [
+      {
+        "name": "O'Melveny 2026 포장 규제 업데이트",
+        "url": "https://www.omm.com/insights/alerts-publications/2026-plastics-epr-packaging-rules-update-what-sb-54-sb-343-state-reporting-deadlines-prc-laws-the-eu-ppwr-mean-for-producers-retailers/"
+      }
+    ],
+    "status": "시행",
+    "summary": "주 재활용 기준을 충족하지 않는 포장에 '쫓는 화살표(♲)' 등 재활용 표시 사용 금지. 2026-10-04부터 집행, 연방법원 소송 계류 중.",
+    "title": "캘리포니아 SB 343 재활용 표시 규제 (Truth in Labeling)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "CalRecycle",
+    "categories": [
+      "EPR·생산자책임",
+      "재활용성·설계",
+      "과대포장·감량",
+      "일회용 플라스틱"
+    ],
+    "country": "US",
+    "effective": "2026-05-01",
+    "id": "us-ca-sb54",
+    "nextDate": "2027-01-01",
+    "nextLabel": "PRO 가입 의무 및 생산자 분담금 개시",
+    "original": "Plastic Pollution Prevention and Packaging Producer Responsibility Act (SB 54, 2022)",
+    "penalty": "위반당 1일 최대 50,000달러",
+    "requirements": [
+      "CAA·PEPRS 등 경로로 생산자 등록(2026-06-01)",
+      "공급·소스 감량 보고",
+      "2032년까지 일회용 포장 100% 재활용·퇴비화 가능, 플라스틱 25% 감량, 재활용률 65%"
+    ],
+    "scope": "캘리포니아에 판매되는 일회용 포장·플라스틱 식품용기 생산자 (주 매출 100만 달러 미만 면제 신청 가능)",
+    "sources": [
+      {
+        "name": "Sustainable Packaging Coalition 정책 동향",
+        "url": "https://sustainablepackaging.org/2026/09/23/packaging-policy-news/"
+      },
+      {
+        "name": "AJ Adhesives EPR 주별 현황",
+        "url": "https://www.ajadhesives.com/packaging-epr-laws-2026/"
+      }
+    ],
+    "status": "시행",
+    "summary": "영구 시행규칙이 2026-05-01 OAL 승인으로 발효. 생산자 등록 2026-06-01 마감. 2026년 6월 17개 주가 연방법원에 소송을 제기했으나 자동 효력정지는 아님.",
+    "title": "캘리포니아 SB 54 포장 EPR",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "Colorado CDPHE",
+    "categories": [
+      "EPR·생산자책임"
+    ],
+    "country": "US",
+    "effective": "2026-01-01",
+    "id": "us-co-hb1355",
+    "original": "Producer Responsibility Program for Statewide Recycling Act",
+    "penalty": "위반 첫날 5,000달러 + 1일 1,500달러, 판매금지",
+    "requirements": [
+      "PRO 가입, 연간 보고(매년 5-31)",
+      "재질별 분담금 납부"
+    ],
+    "scope": "콜로라도 내 포장·종이제품 생산자 (매출 약 563만 달러 미만 또는 1톤 미만 면제, 매년 CPI 조정)",
+    "sources": [
+      {
+        "name": "EPR Atlas 주별 비교",
+        "url": "https://epratlas.com/epr-laws-by-state/"
+      }
+    ],
+    "status": "시행",
+    "summary": "2026년 1월부터 프로그램 전면 가동 및 생산자 분담금 부과(PRO: CAA).",
+    "title": "콜로라도 HB 22-1355 포장 EPR",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "U.S. FDA",
+    "categories": [
+      "식품접촉물질"
+    ],
+    "country": "US",
+    "effective": "",
+    "id": "us-fda-fcs",
+    "original": "21 CFR Parts 174–186; FD&C Act §409(h)",
+    "requirements": [
+      "사용 물질의 규제 근거 확인(CFR/FCN/TOR 면제 등)",
+      "재생 플라스틱은 FDA 무이의서(NOL) 관행 참고"
+    ],
+    "scope": "미국 내 식품 포장 재료",
+    "sources": [
+      {
+        "name": "eCFR Title 21",
+        "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B"
+      }
+    ],
+    "status": "시행",
+    "summary": "식품접촉물질은 CFR 등재, GRAS, 선행승인, 식품접촉물질 통보(FCN) 등 경로로 적법성을 확보해야 함.",
+    "title": "FDA 식품접촉물질 규제 (간접첨가물·FCN)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "Federal Trade Commission",
+    "categories": [
+      "표시·라벨링"
+    ],
+    "country": "US",
+    "effective": "2012-10-01",
+    "id": "us-ftc-green",
+    "original": "16 CFR Part 260",
+    "requirements": [
+      "'재활용 가능' 주장 시 상당수 소비자 접근성 근거",
+      "한정 표현(qualifier) 사용"
+    ],
+    "scope": "미국 내 환경 관련 표시·광고",
+    "sources": [
+      {
+        "name": "FTC Green Guides",
+        "url": "https://www.ftc.gov/legal-library/browse/rules/guides-use-environmental-marketing-claims-green-guides"
+      }
+    ],
+    "status": "시행",
+    "summary": "재활용 가능·퇴비화 가능·재생원료 함유 등 환경 주장의 근거 기준. 개정 검토 진행 중.",
+    "title": "FTC 환경마케팅 가이드 (Green Guides)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  },
+  {
+    "authority": "Oregon DEQ",
+    "categories": [
+      "EPR·생산자책임"
+    ],
+    "country": "US",
+    "effective": "2025-07-01",
+    "id": "us-or-sb582",
+    "original": "Plastic Pollution and Recycling Modernization Act (SB 582, 2021)",
+    "penalty": "1일 최대 25,000달러 및 판매금지",
+    "requirements": [
+      "PRO 가입 및 연간 공급 데이터 보고(매년 5-31)",
+      "재질별 분담금 납부(에코모듈레이션)"
+    ],
+    "scope": "오리건 내 포장·종이제품 생산자 (매출 500만 달러 미만 또는 1톤 미만 면제)",
+    "sources": [
+      {
+        "name": "EPR Atlas 주별 비교",
+        "url": "https://epratlas.com/epr-laws-by-state/"
+      }
+    ],
+    "status": "시행",
+    "summary": "2025-07-01부터 생산자 분담금 부과 개시(PRO: CAA). 일부 생산자 대상 가처분 이슈 있음.",
+    "title": "오리건 SB 582 포장 EPR",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "각 주 환경청",
+    "categories": [
+      "EPR·생산자책임"
+    ],
+    "country": "US",
+    "effective": "",
+    "id": "us-other-epr",
+    "original": "ME LD 1541/LD 1423, MN HF 3911, MD SB 901, WA E2SSB 5284",
+    "requirements": [
+      "2026-05-31 공급 데이터 보고(MN, MD, WA 등)",
+      "워싱턴: CAA 등록 2026-07-01"
+    ],
+    "scope": "각 주 내 포장 생산자",
+    "sources": [
+      {
+        "name": "EPR Atlas 주별 비교",
+        "url": "https://epratlas.com/epr-laws-by-state/"
+      },
+      {
+        "name": "Packaura 2026 EPR 일정",
+        "url": "https://packaura.com/epr-packaging-laws-by-state-2027-guide/"
+      }
+    ],
+    "status": "시행예정",
+    "summary": "미국 내 포장 EPR 법 제정 주는 총 7개. 이 4개 주는 등록·보고 단계로, 분담금은 향후 단계적으로 개시.",
+    "title": "기타 주 포장 EPR (메인·미네소타·메릴랜드·워싱턴)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "출처 확인",
+    "version": 1
+  },
+  {
+    "authority": "채택 각 주",
+    "categories": [
+      "유해물질(PFAS·중금속)"
+    ],
+    "country": "US",
+    "effective": "",
+    "id": "us-tpch",
+    "original": "Toxics in Packaging Clearinghouse Model Legislation",
+    "requirements": [
+      "4대 중금속 합계 100ppm 이하",
+      "공급망 적합성 증명서 보관"
+    ],
+    "scope": "채택 주에서 판매되는 포장·포장 구성요소",
+    "sources": [
+      {
+        "name": "Certivo 미국 EPR·PFAS 가이드",
+        "url": "https://www.certivo.com/blog-details/navigating-us-state-packaging-epr-laws-2026-compliance-guide"
+      }
+    ],
+    "status": "시행",
+    "summary": "납·카드뮴·수은·6가크롬 합계 100ppm 이하. 다수 주가 채택했고 일부 주는 PFAS·프탈레이트로 확대.",
+    "title": "포장 중금속 규제 (TPCH 모델법 채택 주)",
+    "updatedAt": "2026-10-07T00:00:00.000Z",
+    "verify": "확인 필요",
+    "version": 1
+  }
+]

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>포장재 법규 모니터</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EF; --paper:#FFFFFF; --ink:#18262E; --muted:#56666E; --line:#CFD8D3; --soft:#E2E9E5;
+  --primary:#0E6655; --primary-ink:#FFFFFF;
+  --st-on:#1F7A4D; --st-soon:#A86412; --st-draft:#2F5D9E; --st-off:#8A2F2F;
+  --hl:#FFF4D6;
+  --c-KR:#2F5D9E; --c-US:#8A2F2F; --c-EU:#3D4FA8; --c-JP:#B03A55; --c-CN:#A86412;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A1E; --paper:#1A2429; --ink:#E4EBE7; --muted:#9AABA4; --line:#2E3B41; --soft:#22303A;
+    --primary:#3FB39A; --primary-ink:#0D1A16;
+    --st-on:#5CC28D; --st-soon:#E0A04A; --st-draft:#7FA6E6; --st-off:#E08080;
+    --hl:#3A3220;
+    --c-KR:#7FA6E6; --c-US:#E08080; --c-EU:#98A6F0; --c-JP:#EC8AA2; --c-CN:#E0A04A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A1E; --paper:#1A2429; --ink:#E4EBE7; --muted:#9AABA4; --line:#2E3B41; --soft:#22303A;
+  --primary:#3FB39A; --primary-ink:#0D1A16;
+  --st-on:#5CC28D; --st-soon:#E0A04A; --st-draft:#7FA6E6; --st-off:#E08080;
+  --hl:#3A3220;
+  --c-KR:#7FA6E6; --c-US:#E08080; --c-EU:#98A6F0; --c-JP:#EC8AA2; --c-CN:#E0A04A;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--primary)}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.topbar{display:flex;align-items:center;gap:16px;min-height:60px}
+.brand{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.brand small{display:block;font-weight:400;font-size:12px;color:var(--muted);letter-spacing:0}
+.spacer{flex:1}
+.checkstate{font-size:13px;color:var(--muted);text-align:right;line-height:1.35}
+.checkstate b{color:var(--ink);font-weight:600}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px;background:var(--muted)}
+.dot.ok{background:var(--st-on)} .dot.stale{background:var(--st-soon)}
+.bell{position:relative;border:1px solid var(--line);background:var(--paper);border-radius:10px;height:40px;padding:0 14px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px}
+.bell .count{min-width:22px;height:22px;border-radius:11px;background:var(--st-off);color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px}
+.bell .count.zero{background:var(--soft);color:var(--muted)}
+
+/* hero: timeline */
+.hero{padding:28px 0 8px}
+.hero h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 6px;font-weight:700;letter-spacing:-.025em}
+.hero p.lede{margin:0;color:var(--muted);max-width:62ch}
+.banner{margin:18px 0 0;background:var(--hl);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:none;align-items:center;gap:12px;flex-wrap:wrap}
+.banner.show{display:flex}
+.banner strong{font-weight:700}
+.timeline{margin:22px 0 4px;overflow-x:auto;padding-bottom:6px}
+.tl-track{display:flex;gap:0;min-width:max-content;border-top:2px solid var(--ink);position:relative}
+.tl-month{min-width:150px;padding:8px 14px 0 0;border-left:1px solid var(--line)}
+.tl-month:first-child{border-left:none}
+.tl-month h3{margin:0 0 8px;font-size:13px;font-weight:700;padding-left:8px}
+.tl-item{display:block;width:100%;text-align:left;margin:0 0 6px 8px;padding:6px 8px;border-radius:8px;background:var(--paper);border:1px solid var(--line);cursor:pointer;font-size:12.5px;line-height:1.35;max-width:200px}
+.tl-item:hover{border-color:var(--ink)}
+.tl-item .d{font-variant-numeric:tabular-nums;font-weight:600}
+.tl-empty{color:var(--muted);font-size:13px;padding:10px 0}
+
+/* layout */
+.main{display:grid;grid-template-columns:250px 1fr;gap:28px;padding:22px 0 60px}
+@media (max-width:860px){.main{grid-template-columns:1fr}}
+aside.filters{align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px)}
+@media (max-width:860px){aside.filters{position:static}}
+.fgroup{margin-bottom:20px}
+.fgroup h4{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--muted)}
+.search{width:100%;height:42px;border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:4px 11px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cc{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:20px;border-radius:5px;font-size:11px;font-weight:700;color:#fff;padding:0 5px;letter-spacing:.02em}
+.chip .cc{margin-right:6px;height:18px;min-width:26px}
+.chip[aria-pressed="true"] .cc{outline:1px solid var(--paper)}
+.linkbtn{background:none;border:none;color:var(--primary);cursor:pointer;padding:0;font-size:13px;text-decoration:underline}
+
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;flex-wrap:wrap;align-items:flex-end}
+.tab{background:none;border:none;border-bottom:3px solid transparent;padding:10px 12px;cursor:pointer;font-weight:600;color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--primary)}
+.tabs .spacer{flex:1}
+.btn{border:1px solid var(--line);background:var(--paper);border-radius:9px;padding:7px 13px;cursor:pointer;font-size:14px;font-weight:500}
+.btn.primary{background:var(--primary);color:var(--primary-ink);border-color:var(--primary);font-weight:600}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.danger{color:var(--st-off)}
+.resultinfo{font-size:13px;color:var(--muted);margin:0 0 10px}
+
+/* register rows */
+.reg{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.reg.new{box-shadow:inset 4px 0 0 var(--st-off)}
+.reg-head{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:start;padding:14px 16px;cursor:pointer;width:100%;background:none;border:none;text-align:left}
+.reg-head .t{font-weight:600;font-size:15.5px;line-height:1.4}
+.reg-head .o{font-size:12.5px;color:var(--muted)}
+.reg-head .cats{margin-top:6px;display:flex;flex-wrap:wrap;gap:4px}
+.cat{font-size:11.5px;border:1px solid var(--line);border-radius:5px;padding:0 6px;color:var(--muted)}
+.right{text-align:right;white-space:nowrap}
+.status{font-size:12px;font-weight:700;display:inline-block;padding:1px 8px;border-radius:5px;border:1.5px solid currentColor}
+.s-시행{color:var(--st-on)} .s-시행예정{color:var(--st-soon)} .s-입법예고{color:var(--st-draft)} .s-폐지{color:var(--st-off)}
+.eff{display:block;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:4px}
+.newtag{font-size:11px;font-weight:700;color:var(--st-off);margin-left:6px}
+.reg-body{display:none;border-top:1px solid var(--line);padding:14px 16px 16px 72px}
+@media (max-width:600px){.reg-body{padding-left:16px}}
+.reg.open .reg-body{display:block}
+.reg-body h5{margin:14px 0 4px;font-size:13px;color:var(--muted);font-weight:600}
+.reg-body h5:first-child{margin-top:0}
+.reg-body p{margin:0;max-width:72ch}
+.reg-body ul{margin:0;padding-left:18px;max-width:72ch}
+.verify{font-size:12px;font-weight:600}
+.verify.need{color:var(--st-soon)} .verify.ok{color:var(--st-on)}
+.hist{list-style:none;padding:0;margin:0}
+.hist li{padding:6px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.hist li:last-child{border-bottom:none}
+.actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+
+/* change feed */
+.feed{list-style:none;margin:0;padding:0}
+.feed li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.feed .when{font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted);line-height:1.4}
+.feed .type{font-size:12px;font-weight:700;padding:1px 7px;border-radius:5px;color:#fff;margin-right:6px}
+.ty-신규{background:var(--primary)} .ty-개정{background:var(--st-draft)} .ty-폐지,.ty-삭제{background:var(--st-off)} .ty-일정변경{background:var(--st-soon)} .ty-입법예고{background:#5b5bb0}
+.feed .fs{font-weight:600}
+.feed .fd{color:var(--muted);font-size:13.5px;margin-top:2px;max-width:72ch}
+.feed li.unseen{background:linear-gradient(90deg,var(--hl),transparent 70%)}
+
+/* ai */
+.ai{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px}
+.ai textarea{width:100%;min-height:76px;border:1px solid var(--line);border-radius:9px;padding:10px;background:var(--bg);resize:vertical}
+.ai .out{white-space:pre-wrap;margin-top:14px;max-width:76ch}
+.note{font-size:12.5px;color:var(--muted)}
+
+/* drawer & modal */
+.scrim{position:fixed;inset:0;background:rgba(10,20,25,.45);z-index:40;display:none}
+.scrim.show{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--paper);z-index:50;transform:translateX(100%);transition:transform .22s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.show{transform:none}
+.drawer header{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.drawer header h2{margin:0;font-size:17px;flex:1}
+.drawer .body{overflow:auto;padding:4px 18px 18px;flex:1}
+.drawer .prefs{padding:14px 18px;border-top:1px solid var(--line);background:var(--bg)}
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 24px) 14px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.modal.show{display:flex}
+.modal .card{background:var(--paper);border-radius:14px;width:min(720px,100%);padding:22px;border:1px solid var(--line)}
+.modal h2{margin:0 0 14px;font-size:19px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .full{grid-column:1/-1}
+@media (max-width:600px){.form{grid-template-columns:1fr}}
+.form label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
+.form input,.form select,.form textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--bg)}
+.form textarea{min-height:70px;resize:vertical}
+.checks{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px}
+.checks label{font-weight:400;display:flex;gap:5px;align-items:center;margin:0}
+.checks input{width:auto}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:14px;z-index:80;display:none;max-width:90vw}
+.toast.show{display:block}
+.empty{padding:36px 16px;text-align:center;color:var(--muted);background:var(--paper);border:1px dashed var(--line);border-radius:12px}
+.how{font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:22px}
+.how h4{margin:0 0 6px;font-size:14px}
+.how ol{margin:0;padding-left:18px}
+@media (prefers-reduced-motion: reduce){.drawer{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap topbar">
+    <div class="brand">포장재 법규 모니터<small>미국 · 유럽 · 일본 · 중국 · 한국</small></div>
+    <div class="spacer"></div>
+    <div class="checkstate" id="checkState"><span class="dot"></span>점검 기록 불러오는 중</div>
+    <button class="bell" id="bellBtn" aria-label="변경 알림 열기">알림 <span class="count zero" id="bellCount">0</span></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>다가오는 시행일</h1>
+    <p class="lede">5개 시장의 포장재 법규를 매일 아침 자동으로 점검합니다. 자동 수집된 항목은 담당자가 원문을 확인하기 전까지 '확인 필요'로 표시됩니다.</p>
+    <div class="banner" id="banner">
+      <span id="bannerText"></span>
+      <button class="btn" id="bannerOpen">변경 내용 보기</button>
+    </div>
+    <div class="timeline" id="timeline"><div class="tl-empty">시행일 정보를 불러오는 중입니다.</div></div>
+  </section>
+
+  <div class="main">
+    <aside class="filters" aria-label="검색 조건">
+      <div class="fgroup"><input class="search" id="q" type="search" placeholder="법규명, 키워드, 기관 검색" aria-label="검색어"></div>
+      <div class="fgroup"><h4>국가</h4><div class="chips" id="fCountry"></div></div>
+      <div class="fgroup"><h4>유형</h4><div class="chips" id="fCat"></div></div>
+      <div class="fgroup"><h4>상태</h4><div class="chips" id="fStatus"></div></div>
+      <div class="fgroup"><h4>검증</h4><div class="chips" id="fVerify"></div></div>
+      <button class="linkbtn" id="resetF">조건 초기화</button>
+    </aside>
+
+    <section>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="regs" aria-selected="true">법규 목록</button>
+        <button class="tab" role="tab" data-tab="changes" aria-selected="false">변경 이력</button>
+        <span class="spacer"></span>
+        <button class="btn" id="exportBtn">CSV 내보내기</button>
+        <a class="btn" id="editLink" target="_blank" rel="noopener" hidden>GitHub에서 수정</a>
+      </div>
+      <div id="panel-regs"></div>
+      <div id="panel-changes" hidden></div>
+      <div class="how">
+        <h4>업데이트 방식</h4>
+        <ol>
+          <li>매일 오전 7시(한국 시간) GitHub Actions가 공식 API와 Claude 웹 검색으로 5개국 변경을 찾습니다.</li>
+          <li>신규·개정·폐지·삭제·일정변경·입법예고가 이력에 기록되고 Slack으로 알림이 갑니다.</li>
+          <li>이 화면은 브라우저별로 마지막 확인 시점을 기억해, 그 이후 변경을 알림으로 표시합니다.</li>
+        </ol>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="변경 알림" aria-hidden="true">
+  <header><h2>마지막 확인 이후 변경</h2><button class="btn" id="drawerClose">닫기</button></header>
+  <div class="body"><ul class="feed" id="drawerFeed"></ul></div>
+  <div class="prefs">
+    <div style="font-size:13px;font-weight:600;margin-bottom:6px">알림 받을 국가</div>
+    <div class="chips" id="prefCountries"></div>
+    <div class="actions"><button class="btn primary" id="markRead">모두 확인함으로 표시</button></div>
+    <div class="note" id="prefNote"></div>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const COUNTRIES=[{k:"KR",n:"한국"},{k:"US",n:"미국"},{k:"EU",n:"유럽"},{k:"JP",n:"일본"},{k:"CN",n:"중국"}];
+const CNAME=Object.fromEntries(COUNTRIES.map(c=>[c.k,c.n]));
+const CATS=["EPR·생산자책임","식품접촉물질","유해물질(PFAS·중금속)","재활용성·설계","재생원료","과대포장·감량","표시·라벨링","일회용 플라스틱","재사용·리필"];
+const STATUSES=["시행","시행예정","입법예고","폐지"];
+const VERIFY=["출처 확인","확인 필요"];
+const PREF_KEY="pkgRegWatch.prefs";
+const S={regs:[],changes:[],status:null,loaded:false,error:null,
+  prefs:{lastSeen:null,countries:COUNTRIES.map(c=>c.k)},
+  f:{q:"",countries:new Set(),cats:new Set(),status:new Set(),verify:new Set()},open:new Set()};
+const $=id=>document.getElementById(id);
+const el=(tag,attrs={},...kids)=>{const e=document.createElement(tag);
+  for(const[k,v]of Object.entries(attrs)){if(v==null||v===false)continue;
+    if(k==="class")e.className=v;else if(k==="text")e.textContent=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v===true?"":v);}
+  for(const kid of kids.flat())if(kid!=null)e.append(kid.nodeType?kid:document.createTextNode(String(kid)));return e;};
+const today=()=>new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+const fmtDate=s=>s?String(s).slice(0,10):"";
+const ccTag=k=>el("span",{class:"cc",style:`background:var(--c-${k})`,text:k});
+const shorten=(s,n)=>{s=String(s||"");return s.length>n?s.slice(0,n-1)+"…":s};
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),3000)}
+function safeUrl(u){try{const x=new URL(u);return(x.protocol==="https:"||x.protocol==="http:")?x.href:null}catch{return null}}
+function toggle(set,v){set.has(v)?set.delete(v):set.add(v)}
+
+/* prefs in localStorage (per browser) */
+function loadPrefs(){try{const p=JSON.parse(localStorage.getItem(PREF_KEY)||"null");if(p){S.prefs.lastSeen=p.lastSeen||null;if(Array.isArray(p.countries))S.prefs.countries=p.countries}}catch{}}
+function savePrefs(){try{localStorage.setItem(PREF_KEY,JSON.stringify(S.prefs))}catch{}}
+
+/* repo edit link (works on https://<owner>.github.io/<repo>/) */
+(function(){const m=location.hostname.match(/^([^.]+)\.github\.io$/);const repo=location.pathname.split("/").filter(Boolean)[0];
+  if(m&&repo){const a=$("editLink");a.href=`https://github.com/${m[1]}/${repo}/edit/main/data/regulations.json`;a.hidden=false}})();
+
+function chipRow(id,items,set,label=x=>x,prefix){const box=$(id);box.replaceChildren();
+  items.forEach(it=>{const key=typeof it==="object"?it.k:it;
+    box.append(el("button",{class:"chip","aria-pressed":set.has(key)?"true":"false",onclick:()=>{toggle(set,key);buildFilters();renderAll()}},prefix?prefix(key):null,label(it)))});}
+function buildFilters(){
+  chipRow("fCountry",COUNTRIES,S.f.countries,c=>c.n,ccTag);
+  chipRow("fCat",CATS,S.f.cats);
+  chipRow("fStatus",STATUSES,S.f.status);
+  chipRow("fVerify",VERIFY,S.f.verify);
+}
+function matches(r){
+  if(S.f.countries.size&&!S.f.countries.has(r.country))return false;
+  if(S.f.status.size&&!S.f.status.has(r.status))return false;
+  if(S.f.verify.size&&!S.f.verify.has(r.verify||"출처 확인"))return false;
+  if(S.f.cats.size&&!(r.categories||[]).some(c=>S.f.cats.has(c)))return false;
+  const q=S.f.q.trim().toLowerCase();
+  if(q){const hay=[r.title,r.original,r.authority,r.summary,r.scope,(r.requirements||[]).join(" "),(r.categories||[]).join(" "),CNAME[r.country]].join(" ").toLowerCase();
+    if(!q.split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true;
+}
+function changeMatches(c){
+  if(S.f.countries.size&&!S.f.countries.has(c.country))return false;
+  const q=S.f.q.trim().toLowerCase();
+  if(q){const hay=[c.regTitle,c.summary,c.detail].join(" ").toLowerCase();if(!q.split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true;
+}
+function isUnseen(c){
+  if(!S.prefs.countries.includes(c.country))return false;
+  const last=S.prefs.lastSeen||new Date(Date.now()-30*864e5).toISOString();
+  return (c.createdAt||"")>last;
+}
+const unseenList=()=>S.changes.filter(isUnseen);
+
+function renderAll(){renderCheck();renderTimeline();renderRegs();renderChanges();renderBell();renderDrawer()}
+function renderCheck(){
+  const box=$("checkState");box.replaceChildren();
+  if(!S.loaded){box.append(el("span",{class:"dot"}),"점검 기록 불러오는 중");return}
+  const lc=S.status?.lastCheck;
+  if(!lc){box.append(el("span",{class:"dot stale"}),"점검 기록 없음");return}
+  const kst=new Date(new Date(lc).getTime()+9*3600e3).toISOString();
+  const d=kst.slice(0,10);const fresh=d===today();
+  const errs=S.status?.runs?.[0]?.errors||[];
+  box.append(el("span",{class:"dot "+(fresh&&!errs.length?"ok":"stale")}),"마지막 점검 ",el("b",{text:`${d} ${kst.slice(11,16)}`}),el("br"),
+    errs.length?`실패 국가: ${errs.join(", ")}`:(fresh?"오늘 점검 완료":"오늘 점검 전"));
+}
+function renderTimeline(){
+  const box=$("timeline");box.replaceChildren();
+  if(!S.loaded){box.append(el("div",{class:"tl-empty",text:"불러오는 중입니다."}));return}
+  const t=today();const limit=new Date(Date.now()+540*864e5).toISOString().slice(0,10);const items=[];
+  S.regs.filter(matches).forEach(r=>{
+    if(r.effective&&r.effective>=t&&r.effective<=limit)items.push({d:r.effective,r,label:"시행"});
+    if(r.nextDate&&r.nextDate>=t&&r.nextDate<=limit&&r.nextDate!==r.effective)items.push({d:r.nextDate,r,label:r.nextLabel||"주요 일정"});
+  });
+  if(!items.length){box.append(el("div",{class:"tl-empty",text:"앞으로 18개월 안에 예정된 일정이 없습니다."}));return}
+  items.sort((a,b)=>a.d.localeCompare(b.d));const months=new Map();
+  items.forEach(it=>{const k=it.d.slice(0,7);if(!months.has(k))months.set(k,[]);months.get(k).push(it)});
+  const track=el("div",{class:"tl-track"});
+  for(const[k,list]of months){const[y,mo]=k.split("-");const col=el("div",{class:"tl-month"},el("h3",{text:`${y}년 ${+mo}월`}));
+    list.forEach(it=>col.append(el("button",{class:"tl-item",title:it.r.title,onclick:()=>openReg(it.r.id)},
+      el("span",{class:"d",text:it.d.slice(5).replace("-",".")+" "}),ccTag(it.r.country)," ",el("div",{text:shorten(it.r.title,34)}),el("div",{class:"note",text:shorten(it.label,30)}))));
+    track.append(col)}
+  box.append(track);
+}
+function renderRegs(){
+  const p=$("panel-regs");p.replaceChildren();
+  if(S.error){p.append(el("div",{class:"empty",text:S.error}));return}
+  if(!S.loaded){p.append(el("div",{class:"empty",text:"법규 데이터를 불러오는 중입니다."}));return}
+  const list=S.regs.filter(matches).sort((a,b)=>(a.country+a.title).localeCompare(b.country+b.title,"ko"));
+  const pending=S.regs.filter(r=>r.verify==="확인 필요").length;
+  p.append(el("p",{class:"resultinfo",text:`${list.length}건 / 전체 ${S.regs.length}건 · 검토 대기 ${pending}건`}));
+  if(!list.length){p.append(el("div",{class:"empty",text:"조건에 맞는 법규가 없습니다. 검색어나 필터를 줄여 보세요."}));return}
+  const unseenRegs=new Set(unseenList().map(c=>c.regId));
+  list.forEach(r=>p.append(regRow(r,unseenRegs.has(r.id))));
+}
+function regRow(r,isNew){
+  const open=S.open.has(r.id);
+  const wrap=el("article",{class:"reg"+(open?" open":"")+(isNew?" new":""),id:"reg-"+r.id});
+  wrap.append(el("button",{class:"reg-head","aria-expanded":open?"true":"false",onclick:()=>{toggle(S.open,r.id);renderRegs()}},
+    ccTag(r.country),
+    el("div",{},el("div",{class:"t"},r.title,isNew?el("span",{class:"newtag",text:"변경됨"}):null),
+      r.original?el("div",{class:"o",text:r.original}):null,
+      el("div",{class:"cats"},(r.categories||[]).map(c=>el("span",{class:"cat",text:c})),r.verify==="확인 필요"?el("span",{class:"cat",style:"color:var(--st-soon);border-color:var(--st-soon)",text:"검토 대기"}):null)),
+    el("div",{class:"right"},el("span",{class:"status s-"+(r.status||"시행"),text:r.status||"시행"}),r.effective?el("span",{class:"eff",text:"시행 "+r.effective}):null)));
+  if(open){
+    const b=el("div",{class:"reg-body"});
+    if(r.summary)b.append(el("h5",{text:"요약"}),el("p",{text:r.summary}));
+    if(r.requirements?.length)b.append(el("h5",{text:"주요 요건"}),el("ul",{},r.requirements.map(x=>el("li",{text:x}))));
+    if(r.scope)b.append(el("h5",{text:"적용 대상"}),el("p",{text:r.scope}));
+    if(r.penalty)b.append(el("h5",{text:"제재"}),el("p",{text:r.penalty}));
+    if(r.nextDate)b.append(el("h5",{text:"다음 주요 일정"}),el("p",{text:`${r.nextDate} · ${r.nextLabel||""}`}));
+    if(r.authority)b.append(el("h5",{text:"소관 기관"}),el("p",{text:r.authority}));
+    const srcs=(r.sources||[]).filter(s=>safeUrl(s.url));
+    if(srcs.length)b.append(el("h5",{text:"출처"}),el("ul",{},srcs.map(s=>el("li",{},el("a",{href:safeUrl(s.url),target:"_blank",rel:"noopener",text:s.name||s.url})))));
+    b.append(el("h5",{text:"검증 상태"}),el("span",{class:"verify "+(r.verify==="확인 필요"?"need":"ok"),text:(r.verify||"출처 확인")+(r.updatedAt?` · 최종 수정 ${fmtDate(r.updatedAt)}`:"")}));
+    const hist=S.changes.filter(c=>c.regId===r.id);
+    if(hist.length)b.append(el("h5",{text:"변경 이력"}),el("ul",{class:"hist"},hist.slice(0,10).map(c=>el("li",{},el("span",{class:"ty-"+c.type,style:"color:#fff;font-size:11px;font-weight:700;padding:0 6px;border-radius:4px;margin-right:6px",text:c.type}),`${fmtDate(c.date||c.createdAt)} · ${c.summary}`))));
+    wrap.append(b);
+  }
+  return wrap;
+}
+function openReg(id){S.f.q="";$("q").value="";S.open.add(id);setTab("regs");renderRegs();requestAnimationFrame(()=>$("reg-"+id)?.scrollIntoView({behavior:"smooth",block:"start"}))}
+function feedItem(c){
+  return el("li",{class:isUnseen(c)?"unseen":""},
+    el("div",{class:"when"},fmtDate(c.date||c.createdAt),el("br"),ccTag(c.country)),
+    el("div",{},el("div",{},el("span",{class:"type ty-"+c.type,text:c.type}),el("span",{class:"fs",text:c.regTitle||""})),
+      el("div",{text:c.summary||""}),c.detail?el("div",{class:"fd",text:c.detail}):null,
+      el("div",{class:"fd"},c.regId&&S.regs.some(r=>r.id===c.regId)?el("button",{class:"linkbtn",onclick:()=>{closeDrawer();openReg(c.regId)}},"법규 보기"):null,
+        safeUrl(c.sourceUrl)?[" ",el("a",{href:safeUrl(c.sourceUrl),target:"_blank",rel:"noopener",text:c.sourceName||"출처"})]:null,
+        el("span",{text:` · 기록 ${fmtDate(c.createdAt)}${c.by==="auto"?" (자동 점검)":""}`}))));
+}
+function renderChanges(){
+  const p=$("panel-changes");p.replaceChildren();
+  if(!S.loaded)return;
+  const list=S.changes.filter(changeMatches);
+  if(!list.length){p.append(el("div",{class:"empty",text:"기록된 변경이 없습니다."}));return}
+  p.append(el("p",{class:"resultinfo",text:`변경 ${list.length}건 (기록일 기준 최신순)`}),el("ul",{class:"feed"},list.slice(0,300).map(feedItem)));
+}
+function renderBell(){
+  const n=unseenList().length;const c=$("bellCount");c.textContent=n;c.classList.toggle("zero",n===0);
+  if(n>0){$("bannerText").replaceChildren(el("strong",{text:`마지막 확인 이후 변경 ${n}건`})," — 개정, 폐지, 일정 변경을 확인하세요.");$("banner").classList.add("show")}
+  else $("banner").classList.remove("show");
+}
+function renderDrawer(){
+  const f=$("drawerFeed");f.replaceChildren();const list=unseenList();
+  if(!list.length)f.append(el("li",{},el("div",{}),el("div",{class:"note",text:"새로운 변경이 없습니다."})));else list.forEach(c=>f.append(feedItem(c)));
+  const pc=$("prefCountries");pc.replaceChildren();
+  COUNTRIES.forEach(c=>pc.append(el("button",{class:"chip","aria-pressed":S.prefs.countries.includes(c.k)?"true":"false",onclick:()=>{
+    const s=new Set(S.prefs.countries);toggle(s,c.k);S.prefs.countries=COUNTRIES.map(x=>x.k).filter(x=>s.has(x));savePrefs();renderAll()}},ccTag(c.k),c.n)));
+  $("prefNote").textContent=S.prefs.lastSeen?`마지막 확인: ${S.prefs.lastSeen.slice(0,16).replace("T"," ")} (UTC)`:"처음 방문하셨다면 최근 30일 변경이 표시됩니다. 확인 기록은 이 브라우저에만 저장됩니다.";
+}
+function setTab(t){document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t?"true":"false"));["regs","changes"].forEach(x=>$("panel-"+x).hidden=x!==t)}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>setTab(b.dataset.tab)));
+function openDrawer(){$("drawer").classList.add("show");$("drawer").setAttribute("aria-hidden","false");$("scrim").classList.add("show");$("drawerClose").focus()}
+function closeDrawer(){$("drawer").classList.remove("show");$("drawer").setAttribute("aria-hidden","true");$("scrim").classList.remove("show")}
+$("bellBtn").onclick=openDrawer;$("bannerOpen").onclick=openDrawer;$("drawerClose").onclick=closeDrawer;$("scrim").onclick=closeDrawer;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+$("q").addEventListener("input",e=>{S.f.q=e.target.value;renderTimeline();renderRegs();renderChanges()});
+$("resetF").onclick=()=>{S.f={q:"",countries:new Set(),cats:new Set(),status:new Set(),verify:new Set()};$("q").value="";buildFilters();renderAll()};
+$("markRead").onclick=()=>{S.prefs.lastSeen=new Date().toISOString();savePrefs();renderAll();closeDrawer();toast("모두 확인함으로 표시했습니다.")};
+$("exportBtn").onclick=()=>{
+  const cols=["country","title","original","status","effective","nextDate","nextLabel","categories","authority","summary","requirements","scope","penalty","source","verify","updatedAt"];
+  const esc=v=>`"${String(v??"").replace(/"/g,'""')}"`;
+  const rows=[cols.join(",")].concat(S.regs.filter(matches).map(r=>cols.map(c=>esc(c==="categories"?(r.categories||[]).join("; "):c==="requirements"?(r.requirements||[]).join(" / "):c==="source"?(r.sources?.[0]?.url||""):r[c])).join(",")));
+  const blob=new Blob(["\ufeff"+rows.join("\n")],{type:"text/csv;charset=utf-8"});
+  const a=el("a",{href:URL.createObjectURL(blob),download:`packaging-regulations-${today()}.csv`});document.body.append(a);a.click();a.remove();
+};
+
+loadPrefs();buildFilters();renderAll();
+(async()=>{
+  try{
+    const bust="?v="+Date.now();
+    const [regs,changes,status]=await Promise.all(["regulations","changes","status"].map(n=>fetch(`data/${n}.json${bust}`).then(r=>{if(!r.ok)throw new Error(n);return r.json()})));
+    S.regs=regs;S.changes=changes;S.status=status;
+  }catch(e){S.error="데이터 파일을 불러오지 못했습니다. GitHub Pages 배포가 끝났는지 확인하세요.";}
+  S.loaded=true;renderAll();
+})();
+</script>
+</body>
+</html>
